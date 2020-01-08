@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+import "./App.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Nav } from "react-bootstrap";
+import HomePage from "./views/HomePage";
+import SinglePage from "./views/single/single/SinglePage";
+import Login from "./views/login/login";
+
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Nav
+          className="justify-content-center"
+          style={{ backgroundColor: "#dd082e" }}
+          defaultActiveKey="/"
+          as="ul"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          <Nav.Item as="li">
+            <Nav.Link style={{ color: "white", textAlign: "center" }} href="/">
+              cc
+            </Nav.Link>
+          </Nav.Item>
+        </Nav>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route exact component={HomePage} path="/products"/>
+
+          <Route exact path="/:id" component={SinglePage}></Route>
+        </Switch>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;

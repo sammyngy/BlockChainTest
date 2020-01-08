@@ -17,8 +17,6 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -34,5 +32,43 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.card-header {
+  color: #282c34;
+}
+.card-text {
+  color: #282c34;
+}
+
+.card-title {
+  color: #282c34;
+}
+.card{
+  margin: 2%;
+}
+
+.Main {
+  background-color: #201f1f;
+  min-height: 100vh;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+h1{
+  color: #ffffff;
+}
+
+@media all and (min-width: 480px) {
+  .Login {
+    padding: 60px 0;
+  }
+
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
   }
 }
