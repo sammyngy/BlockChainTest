@@ -246,7 +246,6 @@ class HomePage extends React.Component {
           </Row>
           <Row>
             <ListShoes data={filteredShoes} />
-            
           </Row>
         </Container>
       </div>
