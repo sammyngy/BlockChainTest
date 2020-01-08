@@ -80,3 +80,7 @@ h1{
 .imgtoHover:hover + .hovered {
   display: block;
 }
+
+.hovered{
+  text-align: justify;
+}

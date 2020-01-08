@@ -15,9 +15,10 @@ const ShowList = props => {
           <Card.Text className="imgtoHover"><img  style={{width:"45px",postiion:"absolute"}}src={img} alt={name}></img></Card.Text>
           
           <Card.Text className="hovered">
-          {properties}<br></br>
-          {price}<br></br>
-          {category}<br></br>
+          Matière : {properties}<br></br>
+          Catégorie : {category}<br></br>
+          Prix : {price} &euro;<br></br>
+          
           </Card.Text>
           <Link to={`/${id}`}>
           <Card.Title style={{textTransform: "none"}}>{name}</Card.Title>

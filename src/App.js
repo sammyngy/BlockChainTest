@@ -26,22 +26,16 @@ class App extends Component {
             >
               LOGO
             </Nav.Link>
-            
           </Nav.Item>
           <Nav.Item as="li">
-            <Nav.Link
-              style={{ color: "white", textAlign: "center" }}
-              href="/"
-            >
+            <Nav.Link style={{ color: "white", textAlign: "center" }} href="/">
               LOGOUT
             </Nav.Link>
-            
           </Nav.Item>
         </Nav>
         <Switch>
           <Route exact path="/" component={Login} />
           <Route exact component={HomePage} path="/products" />
-
           <Route exact path="/:id" component={SinglePage}></Route>
         </Switch>
       </BrowserRouter>
